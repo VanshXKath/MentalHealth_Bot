@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #ede7f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .user-profile {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;;
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: #000000;;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+  }
+  
+  .user-profile p {
+    margin: 5px 0;
+  }
+  
+  
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #9575cd;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .mood-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .mood-selector button {
+    font-size: 20px;
+    background: #f3e5f5;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .mood-selector button:hover {
+    background-color: #ce93d8;
+  }
+  
+  .chatbox {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chatbox::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 18px;
+    max-width: 80%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    position: relative;
+    clear: both;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+  
+  .message.bot {
+    background: linear-gradient(135deg, #e1bee7, #ce93d8);
+    float: left;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .message.user {
+    background: linear-gradient(135deg, #d1c4e9, #b39ddb);
+    float: right;
+    border-bottom-right-radius: 5px;
+    text-align: right;
+  }
+  
+  .message-animation {
+    animation-name: fadeInUp;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .message.bot p {
+    margin: 5px 0;
+  }
+  
+  .message.bot ul {
+    padding-left: 20px;
+    margin: 5px 0;
+  }
+  
+  .message.bot h1, .message.bot h2, .message.bot h3 {
+    margin: 8px 0;
+    font-size: 1em;
+  }
+  
+  .input-area {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .input-area input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #b39ddb;
+    transition: all 0.3s ease;
+    font-size: 15px;
+  }
+  
+  .input-area input:focus {
+    outline: none;
+    border-color: #7e57c2;
+    box-shadow: 0 0 5px rgba(126, 87, 194, 0.5);
+  }
+  
+  .input-area button {
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #7e57c2, #9575cd);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .input-area button:hover {
+    background: linear-gradient(45deg, #673ab7, #7e57c2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .breathe-btn {
+    margin-top: 15px;
+    text-align: center;
+    color: #6a1b9a;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .breathe-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .breathing-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #83a4d4, #b6fbff);
+    margin: 10px auto;
+    transition: all 1s ease;
+    transform: scale(0.5);
+    box-shadow: 0 0 10px rgba(182, 251, 255, 0.5);
+    display: block;
+  }
+  
+  .breathing-instructions {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #4a4a4a;
+    font-weight: bold;
+  }
+  
+  .typing {
+    opacity: 0.7;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .typing-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 20px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #9c27b0;
+    border-radius: 50%;
+    animation: dot-pulse 1.5s infinite ease-in-out;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes dot-pulse {
+    0%, 100% {
+      transform: scale(0.7);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .breathing-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    clear: both;
+  }
