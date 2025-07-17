@@ -9,27 +9,6 @@ body {
     height: 100vh;
   }
   
-  .user-profile {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #ffffff;;
-    backdrop-filter: blur(10px);
-    padding: 15px 20px;
-    border-radius: 15px;
-    color: #000000;;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1000;
-  }
-  
-  .user-profile p {
-    margin: 5px 0;
-  }
-  
-  
   
   .container {
     width: 90%;
